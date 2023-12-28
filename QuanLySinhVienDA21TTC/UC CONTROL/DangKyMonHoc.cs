@@ -70,7 +70,7 @@ namespace QuanLySinhVienDA21TTC.UC_CONTROL
 
         private void btnthem_Click(object sender, EventArgs e)
         {
-            string query = "Select * from tblMonHoc where tenmonhoc = '" + txtTimkiem.Text + "'";
+            string query = "select mamonhoc, tenmonhoc, sotinchi, hocky, tengiaovien from tblMonHoc inner join tblGiaoVien on tblMonHoc.magiaovien = tblGiaoVien.magiaovien where mamonhoc = '" + txtTimkiem.Text + "'";
             bangmonhoc = ketnoi.DocDuLieu(query);
             bodocghi = ketnoi.docghi;
             dgvMonHoc.DataSource = bangmonhoc;

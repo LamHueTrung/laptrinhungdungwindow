@@ -57,7 +57,7 @@ namespace QuanLySinhVienDA21TTC.UC_CONTROL
                 if (donghh >= 0)
                 {
                     string mamonhoc = bangdiem.Rows[donghh][0].ToString();
-                    string masinhvien = bangdiem.Rows[donghh][3].ToString();
+                    string masinhvien = bangdiem.Rows[donghh][2].ToString();
                     ChamDiem chamdiem = new ChamDiem(masinhvien, mamonhoc);
                     chamdiem.ShowDialog();
                     LoadBangDiem();

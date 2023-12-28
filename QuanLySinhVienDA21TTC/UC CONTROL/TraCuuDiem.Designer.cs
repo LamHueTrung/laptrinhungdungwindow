@@ -29,42 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dgvDiem = new System.Windows.Forms.DataGridView();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.txtTimkiem = new System.Windows.Forms.TextBox();
             this.btnthem = new System.Windows.Forms.Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.dgvDiem = new System.Windows.Forms.DataGridView();
             this.mamonhoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenmonhoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sotinchi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hocky = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tengiaovien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tensinhvien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diemquatrinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diemthi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diemtongket = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiem)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvDiem
-            // 
-            this.dgvDiem.AllowUserToAddRows = false;
-            this.dgvDiem.AllowUserToDeleteRows = false;
-            this.dgvDiem.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.dgvDiem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDiem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.mamonhoc,
-            this.tenmonhoc,
-            this.sotinchi,
-            this.hocky,
-            this.tengiaovien,
-            this.diemtongket});
-            this.dgvDiem.Location = new System.Drawing.Point(21, 71);
-            this.dgvDiem.Name = "dgvDiem";
-            this.dgvDiem.ReadOnly = true;
-            this.dgvDiem.RowHeadersWidth = 51;
-            this.dgvDiem.RowTemplate.Height = 24;
-            this.dgvDiem.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDiem.Size = new System.Drawing.Size(1087, 528);
-            this.dgvDiem.TabIndex = 13;
-            this.dgvDiem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMonHoc_CellContentClick);
             // 
             // btnLamMoi
             // 
@@ -100,6 +77,29 @@
             // 
             this.guna2Elipse1.TargetControl = this;
             // 
+            // dgvDiem
+            // 
+            this.dgvDiem.AllowUserToAddRows = false;
+            this.dgvDiem.AllowUserToDeleteRows = false;
+            this.dgvDiem.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.dgvDiem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDiem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.mamonhoc,
+            this.tenmonhoc,
+            this.tensinhvien,
+            this.diemquatrinh,
+            this.diemthi,
+            this.diemtongket});
+            this.dgvDiem.Location = new System.Drawing.Point(12, 83);
+            this.dgvDiem.Name = "dgvDiem";
+            this.dgvDiem.ReadOnly = true;
+            this.dgvDiem.RowHeadersWidth = 51;
+            this.dgvDiem.RowTemplate.Height = 24;
+            this.dgvDiem.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDiem.Size = new System.Drawing.Size(1087, 528);
+            this.dgvDiem.TabIndex = 18;
+            this.dgvDiem.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvDiem_CellFormatting);
+            // 
             // mamonhoc
             // 
             this.mamonhoc.DataPropertyName = "mamonhoc";
@@ -107,7 +107,7 @@
             this.mamonhoc.MinimumWidth = 6;
             this.mamonhoc.Name = "mamonhoc";
             this.mamonhoc.ReadOnly = true;
-            this.mamonhoc.Width = 125;
+            this.mamonhoc.Width = 200;
             // 
             // tenmonhoc
             // 
@@ -118,32 +118,32 @@
             this.tenmonhoc.ReadOnly = true;
             this.tenmonhoc.Width = 250;
             // 
-            // sotinchi
+            // tensinhvien
             // 
-            this.sotinchi.DataPropertyName = "tensinhvien";
-            this.sotinchi.HeaderText = "TÊN SINH VIÊN";
-            this.sotinchi.MinimumWidth = 6;
-            this.sotinchi.Name = "sotinchi";
-            this.sotinchi.ReadOnly = true;
-            this.sotinchi.Width = 200;
+            this.tensinhvien.DataPropertyName = "tensinhvien";
+            this.tensinhvien.HeaderText = "TÊN SINH VIÊN";
+            this.tensinhvien.MinimumWidth = 6;
+            this.tensinhvien.Name = "tensinhvien";
+            this.tensinhvien.ReadOnly = true;
+            this.tensinhvien.Width = 250;
             // 
-            // hocky
+            // diemquatrinh
             // 
-            this.hocky.DataPropertyName = "diemquatrinh";
-            this.hocky.HeaderText = "ĐIỂM QUÁ TRÌNH";
-            this.hocky.MinimumWidth = 6;
-            this.hocky.Name = "hocky";
-            this.hocky.ReadOnly = true;
-            this.hocky.Width = 200;
+            this.diemquatrinh.DataPropertyName = "diemquatrinh";
+            this.diemquatrinh.HeaderText = "ĐIỂM QUÁ TRÌNH";
+            this.diemquatrinh.MinimumWidth = 6;
+            this.diemquatrinh.Name = "diemquatrinh";
+            this.diemquatrinh.ReadOnly = true;
+            this.diemquatrinh.Width = 200;
             // 
-            // tengiaovien
+            // diemthi
             // 
-            this.tengiaovien.DataPropertyName = "diemthi";
-            this.tengiaovien.HeaderText = "ĐIỂM THI";
-            this.tengiaovien.MinimumWidth = 6;
-            this.tengiaovien.Name = "tengiaovien";
-            this.tengiaovien.ReadOnly = true;
-            this.tengiaovien.Width = 250;
+            this.diemthi.DataPropertyName = "diemthi";
+            this.diemthi.HeaderText = "ĐIỂM THI";
+            this.diemthi.MinimumWidth = 6;
+            this.diemthi.Name = "diemthi";
+            this.diemthi.ReadOnly = true;
+            this.diemthi.Width = 200;
             // 
             // diemtongket
             // 
@@ -152,7 +152,7 @@
             this.diemtongket.MinimumWidth = 6;
             this.diemtongket.Name = "diemtongket";
             this.diemtongket.ReadOnly = true;
-            this.diemtongket.Width = 125;
+            this.diemtongket.Width = 200;
             // 
             // TraCuuDiem
             // 
@@ -173,17 +173,16 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvDiem;
         private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.TextBox txtTimkiem;
         private System.Windows.Forms.Button btnthem;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private System.Windows.Forms.DataGridView dgvDiem;
         private System.Windows.Forms.DataGridViewTextBoxColumn mamonhoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenmonhoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sotinchi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hocky;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tengiaovien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tensinhvien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diemquatrinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diemthi;
         private System.Windows.Forms.DataGridViewTextBoxColumn diemtongket;
     }
 }

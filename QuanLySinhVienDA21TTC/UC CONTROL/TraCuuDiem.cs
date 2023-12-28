@@ -56,5 +56,25 @@ namespace QuanLySinhVienDA21TTC.UC_CONTROL
         {
             LoadBangDiem();
         }
+
+        private void dgvDiem_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            // Kiểm tra nếu đang format cột điểm tổng kết
+            if (e.ColumnIndex == dgvDiem.Columns["diemtongket"].Index && e.RowIndex >= 0)
+            {
+                // Lấy giá trị của cột điểm quá trình và cột điểm thi
+                DataGridViewRow row = dgvDiem.Rows[e.RowIndex];
+                object diemQuaTrinh = row.Cells["diemquatrinh"].Value;
+                object diemThi = row.Cells["diemthi"].Value;
+
+                // Kiểm tra nếu cả hai điểm có giá trị
+                if (diemQuaTrinh != null && diemThi != null)
+                {
+                    // Thực hiện tính toán và đặt giá trị cho cột điểm tổng kết
+                    double diemTongKet = (Convert.ToDouble(diemQuaTrinh) + Convert.ToDouble(diemThi)) / 2;
+                    e.Value = diemTongKet.ToString("N2"); // Hiển thị giá trị với hai chữ số thập phân
+                }
+            }
+        }
     }
 }
