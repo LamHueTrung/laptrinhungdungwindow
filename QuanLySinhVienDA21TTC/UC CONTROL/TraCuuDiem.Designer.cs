@@ -33,20 +33,20 @@
             this.txtTimkiem = new System.Windows.Forms.TextBox();
             this.btnthem = new System.Windows.Forms.Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.dgvDiem = new System.Windows.Forms.DataGridView();
+            this.dvgTraCuu = new System.Windows.Forms.DataGridView();
+            this.btnExcel = new System.Windows.Forms.Button();
             this.mamonhoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenmonhoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tensinhvien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diemquatrinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diemthi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diemtongket = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDiem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgTraCuu)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLamMoi
             // 
             this.btnLamMoi.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLamMoi.Location = new System.Drawing.Point(926, 19);
+            this.btnLamMoi.Location = new System.Drawing.Point(818, 27);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(138, 34);
             this.btnLamMoi.TabIndex = 16;
@@ -57,7 +57,7 @@
             // txtTimkiem
             // 
             this.txtTimkiem.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.txtTimkiem.Location = new System.Drawing.Point(564, 27);
+            this.txtTimkiem.Location = new System.Drawing.Point(456, 35);
             this.txtTimkiem.Name = "txtTimkiem";
             this.txtTimkiem.Size = new System.Drawing.Size(212, 22);
             this.txtTimkiem.TabIndex = 14;
@@ -65,11 +65,11 @@
             // btnthem
             // 
             this.btnthem.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnthem.Location = new System.Drawing.Point(782, 19);
+            this.btnthem.Location = new System.Drawing.Point(674, 27);
             this.btnthem.Name = "btnthem";
             this.btnthem.Size = new System.Drawing.Size(138, 34);
             this.btnthem.TabIndex = 15;
-            this.btnthem.Text = "Tìm kiếm";
+            this.btnthem.Text = "Tra Cứu";
             this.btnthem.UseVisualStyleBackColor = true;
             this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
             // 
@@ -77,28 +77,38 @@
             // 
             this.guna2Elipse1.TargetControl = this;
             // 
-            // dgvDiem
+            // dvgTraCuu
             // 
-            this.dgvDiem.AllowUserToAddRows = false;
-            this.dgvDiem.AllowUserToDeleteRows = false;
-            this.dgvDiem.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.dgvDiem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDiem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dvgTraCuu.AllowUserToAddRows = false;
+            this.dvgTraCuu.AllowUserToDeleteRows = false;
+            this.dvgTraCuu.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.dvgTraCuu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgTraCuu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.mamonhoc,
             this.tenmonhoc,
             this.tensinhvien,
             this.diemquatrinh,
-            this.diemthi,
-            this.diemtongket});
-            this.dgvDiem.Location = new System.Drawing.Point(12, 83);
-            this.dgvDiem.Name = "dgvDiem";
-            this.dgvDiem.ReadOnly = true;
-            this.dgvDiem.RowHeadersWidth = 51;
-            this.dgvDiem.RowTemplate.Height = 24;
-            this.dgvDiem.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDiem.Size = new System.Drawing.Size(1087, 528);
-            this.dgvDiem.TabIndex = 18;
-            this.dgvDiem.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvDiem_CellFormatting);
+            this.diemthi});
+            this.dvgTraCuu.Location = new System.Drawing.Point(12, 83);
+            this.dvgTraCuu.Name = "dvgTraCuu";
+            this.dvgTraCuu.ReadOnly = true;
+            this.dvgTraCuu.RowHeadersWidth = 51;
+            this.dvgTraCuu.RowTemplate.Height = 24;
+            this.dvgTraCuu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dvgTraCuu.Size = new System.Drawing.Size(1087, 528);
+            this.dvgTraCuu.TabIndex = 18;
+            this.dvgTraCuu.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvDiem_CellFormatting);
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcel.Location = new System.Drawing.Point(961, 27);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(138, 34);
+            this.btnExcel.TabIndex = 19;
+            this.btnExcel.Text = "Xuất Excel";
+            this.btnExcel.UseVisualStyleBackColor = true;
+            this.btnExcel.Click += new System.EventHandler(this.button1_Click);
             // 
             // mamonhoc
             // 
@@ -145,28 +155,20 @@
             this.diemthi.ReadOnly = true;
             this.diemthi.Width = 200;
             // 
-            // diemtongket
-            // 
-            this.diemtongket.DataPropertyName = "diemtongket";
-            this.diemtongket.HeaderText = "ĐIỂM TỔNG KẾT";
-            this.diemtongket.MinimumWidth = 6;
-            this.diemtongket.Name = "diemtongket";
-            this.diemtongket.ReadOnly = true;
-            this.diemtongket.Width = 200;
-            // 
             // TraCuuDiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Controls.Add(this.dgvDiem);
+            this.BackColor = System.Drawing.Color.Navy;
+            this.Controls.Add(this.btnExcel);
+            this.Controls.Add(this.dvgTraCuu);
             this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.txtTimkiem);
             this.Controls.Add(this.btnthem);
             this.Name = "TraCuuDiem";
             this.Size = new System.Drawing.Size(1123, 614);
             this.Load += new System.EventHandler(this.TraCuuDiem_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDiem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgTraCuu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,12 +179,12 @@
         private System.Windows.Forms.TextBox txtTimkiem;
         private System.Windows.Forms.Button btnthem;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private System.Windows.Forms.DataGridView dgvDiem;
+        private System.Windows.Forms.DataGridView dvgTraCuu;
+        private System.Windows.Forms.Button btnExcel;
         private System.Windows.Forms.DataGridViewTextBoxColumn mamonhoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenmonhoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn tensinhvien;
         private System.Windows.Forms.DataGridViewTextBoxColumn diemquatrinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn diemthi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diemtongket;
     }
 }

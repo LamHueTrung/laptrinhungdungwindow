@@ -30,10 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvDiem = new System.Windows.Forms.DataGridView();
-            this.btnLamMoi = new System.Windows.Forms.Button();
-            this.txtTimkiem = new System.Windows.Forms.TextBox();
-            this.btnthem = new System.Windows.Forms.Button();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.mamonhoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenmonhoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.masinhvien = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,6 +37,11 @@
             this.diemquatrinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diemthi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diemtongket = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnLamMoi = new System.Windows.Forms.Button();
+            this.txtTimkiem = new System.Windows.Forms.TextBox();
+            this.btnthem = new System.Windows.Forms.Button();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnExcel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiem)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,39 +69,6 @@
             this.dgvDiem.TabIndex = 17;
             this.dgvDiem.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDiem_CellClick);
             this.dgvDiem.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvDiem_CellFormatting);
-            // 
-            // btnLamMoi
-            // 
-            this.btnLamMoi.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLamMoi.Location = new System.Drawing.Point(926, 15);
-            this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(138, 34);
-            this.btnLamMoi.TabIndex = 20;
-            this.btnLamMoi.Text = "Làm mới";
-            this.btnLamMoi.UseVisualStyleBackColor = true;
-            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
-            // 
-            // txtTimkiem
-            // 
-            this.txtTimkiem.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.txtTimkiem.Location = new System.Drawing.Point(564, 23);
-            this.txtTimkiem.Name = "txtTimkiem";
-            this.txtTimkiem.Size = new System.Drawing.Size(212, 22);
-            this.txtTimkiem.TabIndex = 18;
-            // 
-            // btnthem
-            // 
-            this.btnthem.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnthem.Location = new System.Drawing.Point(782, 15);
-            this.btnthem.Name = "btnthem";
-            this.btnthem.Size = new System.Drawing.Size(138, 34);
-            this.btnthem.TabIndex = 19;
-            this.btnthem.Text = "Tìm kiếm";
-            this.btnthem.UseVisualStyleBackColor = true;
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.TargetControl = this;
             // 
             // mamonhoc
             // 
@@ -165,10 +133,55 @@
             this.diemtongket.ReadOnly = true;
             this.diemtongket.Width = 200;
             // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLamMoi.Location = new System.Drawing.Point(811, 18);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(138, 34);
+            this.btnLamMoi.TabIndex = 20;
+            this.btnLamMoi.Text = "Làm mới";
+            this.btnLamMoi.UseVisualStyleBackColor = true;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
+            // 
+            // txtTimkiem
+            // 
+            this.txtTimkiem.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.txtTimkiem.Location = new System.Drawing.Point(449, 26);
+            this.txtTimkiem.Name = "txtTimkiem";
+            this.txtTimkiem.Size = new System.Drawing.Size(212, 22);
+            this.txtTimkiem.TabIndex = 18;
+            // 
+            // btnthem
+            // 
+            this.btnthem.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnthem.Location = new System.Drawing.Point(667, 18);
+            this.btnthem.Name = "btnthem";
+            this.btnthem.Size = new System.Drawing.Size(138, 34);
+            this.btnthem.TabIndex = 19;
+            this.btnthem.Text = "Tìm kiếm";
+            this.btnthem.UseVisualStyleBackColor = true;
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.TargetControl = this;
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcel.Location = new System.Drawing.Point(955, 18);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(138, 34);
+            this.btnExcel.TabIndex = 21;
+            this.btnExcel.Text = "Xuất Excel";
+            this.btnExcel.UseVisualStyleBackColor = true;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            // 
             // ChamDiemSinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnExcel);
             this.Controls.Add(this.dgvDiem);
             this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.txtTimkiem);
@@ -196,5 +209,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn diemquatrinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn diemthi;
         private System.Windows.Forms.DataGridViewTextBoxColumn diemtongket;
+        private System.Windows.Forms.Button btnExcel;
     }
 }

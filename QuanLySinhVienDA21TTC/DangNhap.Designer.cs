@@ -98,7 +98,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(119, 32);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Nhập tên";
+            this.label2.Text = "Nhập mã";
             // 
             // label3
             // 
@@ -158,6 +158,7 @@
             this.Controls.Add(this.cbbQuyen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DangNhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DangNhap";
             this.Load += new System.EventHandler(this.DangNhap_Load);
             this.ResumeLayout(false);

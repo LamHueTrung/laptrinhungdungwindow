@@ -159,6 +159,7 @@
             this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HomeSinhVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomeSinhVien";
             this.Load += new System.EventHandler(this.HomeSinhVien_Load);
             this.ResumeLayout(false);

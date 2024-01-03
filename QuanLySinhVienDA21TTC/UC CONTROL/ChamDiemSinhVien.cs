@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace QuanLySinhVienDA21TTC.UC_CONTROL
 {
@@ -88,6 +89,47 @@ namespace QuanLySinhVienDA21TTC.UC_CONTROL
                     e.Value = diemTongKet.ToString("N2"); // Hiển thị giá trị với hai chữ số thập phân
                 }
             }
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            if (dgvDiem.Rows.Count > 0)
+            {
+                Excel.Application xcelApp = new Excel.Application();
+                xcelApp.Workbooks.Add(Type.Missing);
+                xcelApp.Cells[1, 1] = "MÃ MÔN HỌC";
+                xcelApp.Cells[1, 2] = "TÊN MÔN HỌC";
+                xcelApp.Cells[1, 3] = "MÃ SINH VIÊN";
+                xcelApp.Cells[1, 4] = "TÊN SINH VIÊN";
+                xcelApp.Cells[1, 5] = "ĐIỂM QUÁ TRÌNH";
+                xcelApp.Cells[1, 6] = "ĐIỂM THI";
+                xcelApp.Cells[1, 7] = "ĐIỂM TỔNG KẾT";
+                xcelApp.Cells[1, 8] = "KÝ TÊN";
+
+                for (int i = 0; i < dgvDiem.Rows.Count; i++)
+                {
+                    xcelApp.Cells[i + 2, 1] = dgvDiem.Rows[i].Cells[2].Value?.ToString();
+                    xcelApp.Cells[i + 2, 2] = dgvDiem.Rows[i].Cells[3].Value?.ToString();
+                    xcelApp.Cells[i + 2, 3] = dgvDiem.Rows[i].Cells[4].Value?.ToString();
+                    xcelApp.Cells[i + 2, 4] = dgvDiem.Rows[i].Cells[5].Value?.ToString();
+                    xcelApp.Cells[i + 2, 5] = dgvDiem.Rows[i].Cells[6].Value?.ToString();
+                    xcelApp.Cells[i + 2, 6] = dgvDiem.Rows[i].Cells[7].Value?.ToString();
+                    object diemQuaTrinh = dgvDiem.Rows[i].Cells[6].Value;
+                    object diemThi = dgvDiem.Rows[i].Cells[7].Value;
+                    if (diemQuaTrinh != null && diemThi != null)
+                    {
+                        // Thực hiện tính toán trung bình cộng
+                        double diemTongKet = (Convert.ToDouble(diemQuaTrinh) + Convert.ToDouble(diemThi)) / 2;
+
+                        // Gán giá trị vào ô tương ứng trong Excel
+                        xcelApp.Cells[i + 2, 7] = diemTongKet.ToString("N2"); // Hiển thị giá trị với hai chữ số thập phân
+                    }
+                    
+                }
+                xcelApp.Columns.AutoFit();
+                xcelApp.Visible = true;
+            }
+
         }
     }
 }
